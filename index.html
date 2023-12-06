@@ -3,11 +3,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
 
     <title>Ekonomi</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon " type="image/png" href="bank.png" />
   </head>
   <body>
-    <nav></nav>
+    <nav>
+      <p class="welcome">Logga in för att starta</p>
+      <img src="mony.png" class="logo" />
+      <form>
+        <input
+          type="text"
+          placeholder="Användare"
+          maxlength="12"
+          class="login__input login__input--user"
+        />
+        <input
+          type="text"
+          placeholder="Lösenord"
+          maxlength="6"
+          class="login__input login__input--pin"
+        />
+        <button class="login__btn">&rarr;</button>
+      </form>
+    </nav>
+    <main class="app">
+      <!--tillgängligt-->
+      <div class="balance">
+        <div>
+          <p class="balance__label">Tillgängligt belopp</p>
+          <p class="balance__date">
+            Från och med <span class="date">2023_11-27</span>
+          </p>
+        </div>
+        <p class="balance__value">0000kr</p>
+      </div>
+      <!--överföringar-->
+      <div class="movements">
+        <div class="movements__row">
+          <div class="movements__type movements__type--deposit">Deposition</div>
+          <div class="movements__date">igår</div>
+          <div class="movements__value">4000kr</div>
+        </div>
+        <div class="movements__row">
+          <div class="movements__type movements__type--withdrawal">
+            Uttag
+          </div>
+          <div class="movements__date">igår</div>
+          <div class="movements__value">-1000kr</div>
+        </div>
+      </div>
+      <!--summary-->
+      <div class="summary">
+        <p class="summary__label">Insättning</p>
+        <p class="summary__value summary__value--in">000kr</p>
+        <p class="summary__label">Utsättning</p>
+        <p class="summary__value summary__value--out">099kr</p>
+        <p class="summar__label">Interset</p>
+        <p class="summary__value summary__value--interest">000</p>
+        <button class="btn--sort">&downarrow; Sort</button>
+      </div>
+      <!--operation Transfer-->
+      <div class="operation operation--transfer">
+        <h2>Transfer money</h2>
+        <form class="form form--transfer">
+          <input type="text" class="form__input form__input--to" />
+          <input type="number" class="form__input from__input--amount" />
+          <button class="form__btn form__btn--transfer">&rarr;</button>
+          <label class="form__label">Transfer to</label>
+          <label class="form__label">Amount</label>
+        </form>
+      </div>
+      <!--operation loan-->
+      <div class="operation operation--loan">
+        <h2>Request loan</h2>
+        <form class="form form--loan">
+          <input type="number" class="form__input form__input--loan-amount" />
+          <button class="form__btn form__btn--loan">&rarr;</button>
+          <label class="form__label form__label--loan">Amount</label>
+        </form>
+      </div>
+      <!--operation close-->
+      <div class="operation operation--close">
+        <h2>Stänger Ekonomi</h2>
+        <form action="" class="form form--close">
+          <input type="text" class="form__input form__input--user" />
+          <input
+            type="text"
+            maxlength="6"
+            class="form__input form__input--pin"
+          />
+          <button class="form__btn form__btn--close">&rarr;</button>
+          <label class="form__label">Confirm user</label>
+          <label class="form__label">Confrim Pin</label>
+        </form>
+      </div>
+      <!--Logut timer-->
+      <p class="logout-timer">
+        you will be logged out in <span class="timer">04:00</span>
+      </p>
+    </main>
+    <footer class="footer">&copy; By Samir 1980</footer>
+    <script src="script.js"></script>
   </body>
 </html>
